@@ -42,7 +42,6 @@ if __name__ == "__main__":
     chords = read_jams(args.jams)
  
   harmtrace_tree = run_command(chords, grammar=args.grammar)
-  harmtrace_tree = CLEAN_TREE_RE.sub("", harmtrace_tree)
   print(harmtrace_tree)
 
   tree = nltk.tree.Tree.fromstring(harmtrace_tree, brackets="[]")
